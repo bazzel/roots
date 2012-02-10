@@ -6,7 +6,13 @@ $design-line-height: 16px; // Leading (line height) for normal text as specified
 $base-font-size: $design-base-font-size; // Used by Compass
 $base-line-height: $design-line-height;  // Used by Compass
 $line-height: $design-line-height;       // Used by compass-h5bp
-$font-color: #222 !default;
+
+// Typography:
+$font-family: "Century Gothic", sans-serif;
+
+// Colors:
+$background-color: #231710;
+$font-color: white;
 
 $link-color: #00e !default;
 $link-hover-color: #06e !default;

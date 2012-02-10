@@ -7,7 +7,7 @@
 body, select, input, textarea {
   color: $font-color;
   // Set your base font here, to apply evenly
-  // font-family: Georgia, serif;
+  font-family: $font-family;
 }
 
 //-----------------------------------
@@ -18,7 +18,6 @@ body, select, input, textarea {
 
 body {
   // Fonts & Color
-  font-family: "Century Gothic","sans-serif";
   // Text
   // Background
   // Dimensions
@@ -29,18 +28,9 @@ body {
 }
 
 #container {
-  // Fonts & Color
-  color: white;
-  // Text
-  // Background
-  background: #231710;
-  // Dimensions
+  background: $background-color;
   margin: 0 auto;
   width: 700px;
-  // Positioning & Page Flows
-  // Borders
-  // Bullets & Advanced
-
 }
 
 header {}
