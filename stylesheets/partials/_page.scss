@@ -14,9 +14,34 @@ body, select, input, textarea {
 // Add your own custom styles below
 //-----------------------------------
 
-body {}
+@include establish-baseline;
 
-#container {}
+body {
+  // Fonts & Color
+  font-family: "Century Gothic","sans-serif";
+  // Text
+  // Background
+  // Dimensions
+  @include rhythm(4,0,0,4);
+  // Positioning & Page Flows
+  // Borders
+  // Bullets & Advanced
+}
+
+#container {
+  // Fonts & Color
+  color: white;
+  // Text
+  // Background
+  background: #231710;
+  // Dimensions
+  margin: 0 auto;
+  width: 700px;
+  // Positioning & Page Flows
+  // Borders
+  // Bullets & Advanced
+
+}
 
 header {}
 

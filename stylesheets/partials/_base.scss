@@ -1,7 +1,11 @@
 // This file must be imported before loading html5-boilerplate
+$design-base-font-size: 13px; // Font size for normal text as specified in PSD file
+$design-line-height: 16px; // Leading (line height) for normal text as specified PSD file
 
 // base
-$line-height: 1.4 !default;
+$base-font-size: $design-base-font-size; // Used by Compass
+$base-line-height: $design-line-height;  // Used by Compass
+$line-height: $design-line-height;       // Used by compass-h5bp
 $font-color: #222 !default;
 
 $link-color: #00e !default;
