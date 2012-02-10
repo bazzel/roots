@@ -24,3 +24,5 @@ pkg
 .rvmrc
 .bundle
 public/css/*.css
+tmp/*.*
+!tmp/restart.txt
