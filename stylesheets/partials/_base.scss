@@ -1,5 +1,6 @@
 // This file must be imported before loading html5-boilerplate
 @import "compass/reset/utilities";
+@import "compass/utilities/general/clearfix";
 @import "compass/layout/grid-background";
 @import "compass/typography/vertical_rhythm";
 @import "compass/typography/text/replacement";
@@ -14,6 +15,9 @@ $design-line-height: 16px; // Leading (line height) for normal text as specified
 $base-font-size: $design-base-font-size; // Used by Compass
 $base-line-height: $design-line-height;  // Used by Compass
 $line-height: $design-line-height;       // Used by compass-h5bp
+$design-h1-font-size: 13px;
+$design-h2-font-size: 58px;
+$design-h3-font-size: 18px;
 
 // Typography:
 $font-family: "Century Gothic", sans-serif;

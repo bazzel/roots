@@ -10,10 +10,6 @@ body, select, input, textarea {
   font-family: $font-family;
 }
 
-p {
-  // margin: 1.231em;
-}
-
 //-----------------------------------
 // Add your own custom styles below
 //-----------------------------------
@@ -21,18 +17,20 @@ p {
 @include establish-baseline;
 
 body {
-  // Fonts & Color
-  // Text
-  // Background
-  // @include baseline-grid;
-  // Dimensions
   @include rhythm(4,0,0,4);
-  // Positioning & Page Flows
-  // Borders
-  // Bullets & Advanced
 }
 
-#container, header {
+h2 {
+  @include adjust-font-size-to($design-h2-font-size, 3);
+  color: $complement-accent-color;
+}
+
+h3 {
+  @include adjust-font-size-to($design-h3-font-size, 2);
+  color: $base-color;
+}
+
+#container, header, article h2 {
   @include border-top-left-radius(25px);
 }
 
@@ -44,20 +42,14 @@ body {
 
 header {
   background: image-url('header-bg.jpg') no-repeat right top $complement-support-color;
-  @include trailing-border(6px, 1);
-  border-color: $complement-accent-color;
-  // Fonts & Color
-  // Text
-  // Background
-  // Dimensions
   @include padding-leader(1);
   padding: {
     right: 2em;
     left: 2em;
   }
-  // Positioning & Page Flows
-  // Borders
-  // Bullets & Advanced
+  border-color: $complement-accent-color;
+  @include trailing-border(6px, 1);
+  @include clearfix;
 
   h1 {
     float: right;
@@ -79,9 +71,67 @@ nav {
       }
     }
   }
-
 }
 
-#main {}
+article {
+  $border-width: 3px;
+  h2 {
+    // Fonts & Color
+    // Text
+    // Background
+    background: image-url('woman-bg.jpg') no-repeat black;
+    // Dimensions
+    // @include rhythm(0, 2.5, 0, 0.5, $design-h2-font-size);
+    // Positioning & Page Flows
+    // Borders
+    border: {
+      color: $base-color;
+      right: $border-width $base-color;
+      left: $border-width $base-color;
+      style: solid;
+    }
+    @include leading-border($border-width, 2.5, $design-h2-font-size);
+    @include trailing-border($border-width, 0.5, $design-h2-font-size);
+
+    // Bullets & Advanced
+
+  }
+
+  .content {
+    // Fonts & Color
+    // Text
+    text-align: right;
+    // Background
+    background: #2C2C2C;
+    // Dimensions
+    margin-left: 8em;
+    padding: {
+      right: 1em;
+      left: 1em;
+    }
+    @include padding-leader(1);
+    // Positioning & Page Flows
+    // Borders
+    border: {
+      color: $base-color;
+      right: $border-width $base-color;
+      left: $border-width $base-color;
+      style: solid;
+    }
+    @include trailing-border($border-width, 1);
+    // Bullets & Advanced
+
+  }
+}
+
+#main {
+  @include rhythm(0, 2, 2, 0);
+  padding: {
+    right: 4em;
+    left: 4em;
+  }
+
+
+}
 
 footer {}
