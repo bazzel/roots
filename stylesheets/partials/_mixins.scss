@@ -1,0 +1,3 @@
+@mixin baseline-grid {
+  @include baseline-grid-background($base-line-height, #D64E4E);
+}

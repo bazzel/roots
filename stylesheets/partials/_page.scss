@@ -5,9 +5,13 @@
 // probably be customized for each site
 //-----------------------------------------------
 body, select, input, textarea {
-  color: $font-color;
+  color: $base-color;
   // Set your base font here, to apply evenly
   font-family: $font-family;
+}
+
+p {
+  // margin: 1.231em;
 }
 
 //-----------------------------------
@@ -20,6 +24,7 @@ body {
   // Fonts & Color
   // Text
   // Background
+  // @include baseline-grid;
   // Dimensions
   @include rhythm(4,0,0,4);
   // Positioning & Page Flows
@@ -27,13 +32,55 @@ body {
   // Bullets & Advanced
 }
 
+#container, header {
+  @include border-top-left-radius(25px);
+}
+
 #container {
-  background: $background-color;
+  background: $complement-support-color;
   margin: 0 auto;
   width: 700px;
 }
 
-header {}
+header {
+  background: image-url('header-bg.jpg') no-repeat right top $complement-support-color;
+  @include trailing-border(6px, 1);
+  border-color: $complement-accent-color;
+  // Fonts & Color
+  // Text
+  // Background
+  // Dimensions
+  @include padding-leader(1);
+  padding: {
+    right: 2em;
+    left: 2em;
+  }
+  // Positioning & Page Flows
+  // Borders
+  // Bullets & Advanced
+
+  h1 {
+    float: right;
+    @include replace-text-with-dimensions('logo.gif');
+  }
+}
+
+nav {
+  @include margin-trailer(1);
+  ul {
+    li {
+      a {
+        @include adjust-font-size-to(23px, 2);
+        text-decoration: none;
+        @include link-colors($base-color, $complement-accent-color, $complement-accent-color, $base-color);
+        &.active {
+          color: $complement-accent-color;
+        }
+      }
+    }
+  }
+
+}
 
 #main {}
 
