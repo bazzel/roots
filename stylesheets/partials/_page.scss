@@ -42,7 +42,7 @@ h3 {
 
 header {
   background: image-url('header-bg.jpg') no-repeat right top $complement-support-color;
-  @include padding-leader(1);
+  @include padding-leader(1.5);
   padding: {
     right: 2em;
     left: 2em;
@@ -58,7 +58,7 @@ header {
 }
 
 nav {
-  @include margin-trailer(1);
+  @include margin-trailer(0.5);
   ul {
     li {
       a {
