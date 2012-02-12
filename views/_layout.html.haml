@@ -35,12 +35,15 @@
     %script{ :src => "js/modernizr-2.0.6.min.js" }
 
   %body
+    = render "fb"
     #container
       %header
         = render "header"
       #main{ :role => 'main' }
         = yield
       %footer
+        = fb_like_button
+        %p.made-by This time this site is made by Patrick
     -# end of #container
 
     -# Javascript at the bottom for fast page loading

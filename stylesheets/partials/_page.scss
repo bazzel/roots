@@ -125,13 +125,25 @@ article {
 }
 
 #main {
-  @include rhythm(0, 2, 2, 0);
+  @include rhythm(0, 2, 1, 0);
   padding: {
     right: 4em;
     left: 4em;
   }
-
-
 }
 
-footer {}
+footer {
+  @include rhythm(0, 0, 1, 0);
+  @include clearfix;
+  padding: {
+    right: 2em;
+    left: 2em;
+  }
+  .fb-like {
+    float: left;
+  }
+  .made-by {
+    @include adjust-font-size-to(10px);
+    text-align: right;
+  }
+}

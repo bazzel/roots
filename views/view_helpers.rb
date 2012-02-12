@@ -4,7 +4,7 @@
 # views pristine.
 #
 module ViewHelpers
-  
+
   # Calculate the years for a copyright
   def copyright_years(start_year)
     end_year = Date.today.year
@@ -14,12 +14,26 @@ module ViewHelpers
       "\#{start_year}&#8211;\#{end_year}"
     end
   end
-  
+
   # Handy for hiding a block of unfinished code
   def hidden(&block)
     #no-op
   end
-  
+
   # Add your own helpers below...
-  
+  def fb_like_button
+    options = {
+      'class'             => 'fb-like',
+      'data-href'         => "http://roots-hairstyles.nl/",
+      'data-layout'       => "button_count",
+      'data-send'         => false,
+      'data-show-faces'   => false,
+      'data-width'        => 450
+    }
+    content_tag :div, '', options
+  end
+
+
+
+
 end
