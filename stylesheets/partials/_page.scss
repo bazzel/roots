@@ -25,10 +25,6 @@ h2 {
   color: $complement-accent-color;
 }
 
-h3 {
-  @include adjust-font-size-to($design-h3-font-size, 2);
-  color: $base-color;
-}
 
 #container, header, article h2 {
   @include border-top-left-radius(25px);
@@ -120,6 +116,11 @@ article {
     }
     @include trailing-border($border-width, 1);
     // Bullets & Advanced
+    em {
+      @include adjust-font-size-to(1.5 * $base-font-size, 2);
+      color: $base-color;
+      display: block;
+    }
 
   }
 }
