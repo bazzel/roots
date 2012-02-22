@@ -26,8 +26,9 @@
 
     -# CSS: implied media="all"
     -# CSS concatenated and minified via ant build script
-    -# %link{ :rel => "stylesheet", :href => "css/style.css"}/
-    %link{ :rel => "stylesheet", :href => "css/cloned.css"}/
+    %link{ :rel => "stylesheet", :href => "css/style.css"}/
+    -# http://www.google.com/webfonts#UsePlace:use/Collection:Lato:300,400,700|Arimo
+    %link{ href: 'http://fonts.googleapis.com/css?family=Lato:300,400,700|Arimo', rel: 'stylesheet'}/
 
     -#
       All JavaScript at the bottom, except for Modernizr / Respond.
@@ -35,28 +36,28 @@
       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/
     %script{ :src => "js/modernizr-2.0.6.min.js" }
 
-  %body
-    = render "fb"
+  %body.responsive
+    %header.full
+      = render "header"
+    %h1
+      %strong Foo
+      %em Bar
     #container
-      %header
-        = render "header"
       #main{ :role => 'main' }
         = yield
       %footer
-        = fb_like_button
-        %p.made-by This time this site is made by Patrick
     -# end of #container
 
     -# Javascript at the bottom for fast page loading
 
     -# Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline
-    -# %script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" }
-    -# %script
-    -#   window.jQuery || document.write("<script src='js/jquery-1.6.2.min.js'>\x3C/script>")
+    %script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" }
+    %script
+      window.jQuery || document.write("<script src='js/jquery-1.6.2.min.js'>\x3C/script>")
 
     -# scripts concatenated and minified via ant build script
     -# %script{ :src => "js/plugins.js" }
-    -# %script{ :src => "js/script.js" }
+    %script{ :src => "js/script.js" }
     -# end scripts
 
     -#  asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet

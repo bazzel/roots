@@ -1,0 +1,155 @@
+@import "compass/typography/vertical_rhythm";
+@import "compass/typography/text/replacement";
+@import "compass/typography/links/link-colors";
+@import "compass/typography/lists";
+@import "compass/css3";
+
+$design-base-font-size: 13px; // Font size for normal text as specified in PSD file
+$design-line-height: 16px; // Leading (line height) for normal text as specified PSD file
+
+// base
+$base-font-size: $design-base-font-size; // Used by Compass
+$base-line-height: $design-line-height;  // Used by Compass
+$design-h1-font-size: 13px; // TODO: Use relative size here.
+$design-h2-font-size: 58px;
+$design-h3-font-size: 18px;
+
+// Typography:
+$font-family: "Century Gothic", sans-serif;
+
+// Colors:
+$base-color: white;
+$complement-support-color: #231710;
+$complement-accent-color: #9c1e59;
+
+@include global-reset;
+//-----------------------------------------------
+// The following html5-boilerplate styles should
+// probably be customized for each site
+//-----------------------------------------------
+body, select, input, textarea {
+  color: $base-color;
+  // Set your base font here, to apply evenly
+  font-family: $font-family;
+}
+
+//-----------------------------------
+// Add your own custom styles below
+//-----------------------------------
+@include establish-baseline;
+
+body {
+  @include rhythm(4,0,0,4);
+}
+
+h2 {
+  @include adjust-font-size-to($design-h2-font-size, 3);
+  color: $complement-accent-color;
+}
+
+
+#container, header, article h2 {
+  @include border-top-left-radius(25px);
+}
+
+#container {
+  background: $complement-support-color;
+  margin: 0 auto;
+  width: 700px;
+}
+
+header {
+  background: image-url('header-bg.jpg') no-repeat right top $complement-support-color;
+  @include padding-leader(1);
+  padding: {
+    right: 2em;
+    left: 2em;
+  }
+  border-color: $complement-accent-color;
+  @include trailing-border(6px, 1);
+  @include clearfix;
+
+  h1 {
+    float: right;
+    @include replace-text-with-dimensions('logo.gif');
+  }
+}
+
+nav {
+  @include margin-trailer(0.5);
+  ul {
+    li {
+      a {
+        @include adjust-font-size-to(23px, 2);
+        text-decoration: none;
+        @include link-colors($base-color, $complement-accent-color, $complement-accent-color, $base-color);
+        &.active {
+          color: $complement-accent-color;
+        }
+      }
+    }
+  }
+}
+
+article {
+  $border-width: 3px;
+  h2 {
+    background: image-url('woman-bg.jpg') no-repeat black;
+    border: {
+      color: $base-color;
+      right: $border-width $base-color;
+      left: $border-width $base-color;
+      style: solid;
+    }
+    @include leading-border($border-width, 2.5, $design-h2-font-size);
+    @include trailing-border($border-width, 0.5, $design-h2-font-size);
+  }
+
+  .content {
+    text-align: right;
+    background: #2C2C2C;
+    margin-left: 8em;
+    padding: {
+      right: 1em;
+      left: 1em;
+    }
+    @include padding-leader(1);
+    border: {
+      color: $base-color;
+      right: $border-width $base-color;
+      left: $border-width $base-color;
+      style: solid;
+    }
+    @include trailing-border($border-width, 1);
+    em {
+      @include adjust-font-size-to(1.5 * $base-font-size, 2);
+      color: $base-color;
+      display: block;
+    }
+  }
+}
+
+#main {
+  @include rhythm(0, 2, 1, 0);
+  padding: {
+    right: 4em;
+    left: 4em;
+  }
+}
+
+footer {
+  @include rhythm(0, 0, 1, 0);
+  @include clearfix;
+  padding: {
+    right: 2em;
+    left: 2em;
+  }
+  .fb-like {
+    float: left;
+  }
+  .made-by {
+    @include adjust-font-size-to(10px);
+    text-align: right;
+  }
+}
+

@@ -1,29 +1,29 @@
 // This file must be imported before loading html5-boilerplate
-@import "compass/reset/utilities";
-@import "compass/utilities/general/clearfix";
+// @import "compass/reset/utilities";
+// @import "compass/utilities/general/clearfix";
 @import "compass/layout/grid-background";
 @import "compass/typography/vertical_rhythm";
 @import "compass/typography/text/replacement";
 @import "compass/typography/links/link-colors";
+// @import "compass/typography/lists/horizontal-list";
+// @import "compass/typography/lists/inline-list";
+@import "compass/typography/lists";
 
 @import "mixins";
 
-$design-base-font-size: 13px; // Font size for normal text as specified in PSD file
-$design-line-height: 16px; // Leading (line height) for normal text as specified PSD file
-
 // base
-$base-font-size: $design-base-font-size; // Used by Compass
-$base-line-height: $design-line-height;  // Used by Compass
-$line-height: $design-line-height;       // Used by compass-h5bp
+$base-font-size: 16px; // Used by Compass
+$base-line-height: 24px;  // Used by Compass
 $design-h1-font-size: 13px; // TODO: Use relative size here.
 $design-h2-font-size: 58px;
 $design-h3-font-size: 18px;
 
 // Typography:
-$font-family: "Century Gothic", sans-serif;
+$base-font-family: 'Arimo', "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+$alt-font-family: 'Lato', "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 
 // Colors:
-$base-color: white;
+$base-color: black;//white;
 $complement-support-color: #231710;
 $complement-accent-color: #9c1e59;
 

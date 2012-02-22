@@ -7,7 +7,7 @@
 // Now, you can simply include everything
 // (except print and helpers) by uncommeting this line
 @include global-reset;
-@include h5bp-normalize;
+// @include h5bp-normalize;
 
 // Or, you can import the "overrides" partial if
 // you want more control over individual mixins
@@ -15,11 +15,11 @@
 
 // Finally, put your own styles in these partials
 // and add more as needed (i.e. forms, tables, nav)
-@import "partials/fonts";
+// @import "partials/fonts";
 @import "partials/page";
 
 // Helpers classes should come second-to-last
-@include h5bp-helpers;
+// @include h5bp-helpers;
 
 // Media should come last
 @import "partials/media";

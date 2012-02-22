@@ -45,3 +45,10 @@ else
     Rack::Directory.new(root + '/public')
   ])
 end
+
+require 'rack/coffee'
+use Rack::Coffee, {
+    :root => File.dirname(__FILE__),
+      :urls => '/js',
+        :static => false
+}

@@ -1,3 +1,11 @@
 @mixin baseline-grid {
   @include baseline-grid-background($base-line-height, #D64E4E);
 }
+
+@mixin base-font-family {
+  font-family: $base-font-family;
+}
+
+@mixin alt-font-family {
+  font-family: $alt-font-family;
+}
