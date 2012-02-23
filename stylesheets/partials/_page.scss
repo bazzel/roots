@@ -17,7 +17,6 @@ body, select, input, textarea {
 @include establish-baseline;
 
 body {
-//   @include rhythm(4,0,0,4);
   background: #24140c;
   color: rgba(240, 218, 213, 1);
 }
@@ -151,67 +150,30 @@ body {
 //   }
 // }
 //
+
+
+
 header {
-  // Fonts & Color
-  // Text
-  // Background
-  // background: rgba(240, 218, 213, 0.5);
+  @include lock-menu;
   background: rgba(255, 255, 255, 0.85);
-  // Dimensions
-  width: 100%; //Set width explicitly because of position absolute.
   @include padding-leader(.5);
-  // Positioning & Page Flows
-  // Borders
   border-color: $complement-accent-color;
   @include trailing-border(6px, .5);
-  // Bullets & Advanced
-  &.full {
-    position: absolute;
-    h1 {
-      // Fonts & Color
-      @include adjust-font-size-to(52px,3);
-      @include replace-text('logo.png');
-      // background: image-url('logo.gif') no-repeat center center;
-      // Dimensions
-      @include rhythm(2,0,0,2, 52px);
-      // Positioning & Page Flows
-      // Borders
-      // Bullets & Advanced
-    }
-
+  h1 {
+    @include adjust-font-size-to(52px,3);
+    @include replace-text('logo.png');
+    @include rhythm(2,0,0,2,52px);
   }
-  &.fixed {
-    position: fixed;
-    h1 {
-      display: none;
-    }
-  }
-
   nav {
-    // Fonts & Color
-    // Text
     text-align: center;
-    // Background
-    // Dimensions
-    // @include rhythm(6,0,0,0);
-    // Positioning & Page Flows
-    // Borders
-    // Bullets & Advanced
     ul {
-      // Fonts & Color
-      // Text
-      // Background
-      // Dimensions
-      // Positioning & Page Flows
-      // Borders
-      // Bullets & Advanced
       @include inline-list;
       li {
         a {
-            @include alt-font-family;
-            @include adjust-font-size-to(22px, 2);
-            font-weight: 300;
-            letter-spacing: 1px;
+          @include alt-font-family;
+          @include adjust-font-size-to(22px, 2);
+          font-weight: 300;
+          letter-spacing: 1px;
         }
       }
     }

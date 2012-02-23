@@ -9,3 +9,27 @@
 @mixin alt-font-family {
   font-family: $alt-font-family;
 }
+
+// Use this mixin in combination with the jQuery lockMenu plugin.
+// You apply this mixin to a container tag (e.g. 'header') which
+// contains a menu which will stay visible during scrolling.
+//
+// $menu  - Selector which contains the menu (default: #menu)
+// $full  - CSS classname applied to the container tag when the menu is fully visible
+// $fixed - CSS classname applied to the container tag when all but the menu is hidden
+@mixin lock-menu(
+  $menu: '#menu',
+  $full: 'full',
+  $fixed: 'fixed'
+) {
+  width: 100%; //Set width explicitly because of position absolute.
+  &.#{$full} {
+    position: absolute;
+  }
+  &.#{$fixed} {
+    position: fixed;
+    & > *:not(#{$menu}) {
+      display: none;
+    }
+  }
+}
