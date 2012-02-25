@@ -23,6 +23,7 @@
   $fixed: 'fixed'
 ) {
   width: 100%; //Set width explicitly because of position absolute.
+  top: 0;
   &.#{$full} {
     position: absolute;
   }
