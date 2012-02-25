@@ -17,8 +17,10 @@ body, select, input, textarea {
 @include establish-baseline;
 
 body {
-  background: #24140c;
-  color: rgba(240, 218, 213, 1);
+  @include grid;
+  @include container;
+  // background: #2b170e;
+  // color: rgba(240, 218, 213, 1);
 }
 //
 // h2 {
@@ -31,11 +33,14 @@ body {
 //   @include border-top-left-radius(25px);
 // }
 //
-// #container {
-//   background: $complement-support-color;
-//   margin: 0 auto;
-//   width: 700px;
-// }
+#container {
+  @include pad(4,4);
+  // @include padding-leader(4);
+  background: rgba(240, 218, 213, 1);
+  color: #2b170e;
+  // margin: 0 auto;
+  // width: 700px;
+}
 //
 // header {
 //   background: image-url('header-bg.jpg') no-repeat right top $complement-support-color;
@@ -181,8 +186,23 @@ header {
 }
 
 h2 {
-  @include adjust-font-size-to($design-h2-font-size, 3);
+  @include adjust-font-size-to($design-h2-font-size, 2);
   text-align: center;
-  @include rhythm(0,15,5,0, $design-h2-font-size);
-  background: image-url('header-xl-bg.jpg') no-repeat center top;
+  @include rhythm(0,13,2,0, $design-h2-font-size);
+  background: image-url('header-l-bg.jpg') no-repeat center bottom #2b170e;
+  // @include background-size(cover);
+  color: white;
+  @include alt-font-family;
+  @include single-text-shadow(#000, 1px, 1px, 6px);
+  em {
+    display: block;
+    font-weight: 100;
+  }
+}
+
+h3 {
+  @include adjust-font-size-to($design-h3-font-size, 2);
+  text-align: center;
+  @include rhythm(0,3,0,0, $design-h3-font-size);
+  @include alt-font-family;
 }

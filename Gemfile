@@ -7,7 +7,7 @@ gem 'serve', '1.5.1'
 
 # Use Compass and Sass
 gem 'compass', '0.11.7'
-# gem "compass-susy-plugin", "~> 0.9"
+gem "compass-susy-plugin", "~> 0.9"
 gem 'haml', '3.1.4'
 gem 'html5-boilerplate', '2.1.0'
 gem "rack-coffee", "0.9.1"

@@ -8,6 +8,7 @@
 // @import "compass/typography/lists/horizontal-list";
 // @import "compass/typography/lists/inline-list";
 @import "compass/typography/lists";
+@import "susy";
 
 @import "mixins";
 
@@ -16,22 +17,28 @@ $base-font-size: 16px; // Used by Compass
 $base-line-height: 24px;  // Used by Compass
 $design-h1-font-size: 52px; // TODO: Use relative size here.
 $design-h2-font-size: 36px;
-$design-h3-font-size: 18px;
+$design-h3-font-size: 28px;
 
 // Typography:
 $base-font-family: 'Arimo', "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 $alt-font-family: 'Lato', "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 
+// Susy
+$total-cols             : 18;
+$gutter-width           : 1%;
+$side-gutter-width      : $gutter-width/2;
+$col-width              : (100% - ($total-cols*$gutter-width))/$total-cols;
+
 // Colors:
 $base-color: black;//white;
 $complement-support-color: #231710;
 $complement-accent-color: #9c1e59;
-
 $link-color: #00e !default;
 $link-hover-color: #06e !default;
 $link-visited-color: #551a8b !default;
-
 $selected-font-color: #fff !default;
 $selected-background-color: #ff5e99 !default;
-
 $invalid-background-color: #f0dddd !default;
+$column-color: white;
+$gutter-color: #FFD95F;
+$baseline-color: #FFD95F;
