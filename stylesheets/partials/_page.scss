@@ -160,9 +160,9 @@ header {
   border-color: $complement-accent-color;
   @include trailing-border(6px, .5);
   h1 {
-    @include adjust-font-size-to(52px,3);
+    @include adjust-font-size-to($design-h1-font-size,3);
     @include replace-text('logo.png');
-    @include rhythm(2,0,0,2,52px);
+    @include rhythm(2,0,0,2,$design-h1-font-size);
   }
   nav {
     text-align: center;
@@ -178,4 +178,11 @@ header {
       }
     }
   }
+}
+
+h2 {
+  @include adjust-font-size-to($design-h2-font-size, 3);
+  text-align: center;
+  @include rhythm(0,15,5,0, $design-h2-font-size);
+  background: image-url('header-xl-bg.jpg') no-repeat center top;
 }
