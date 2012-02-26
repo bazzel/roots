@@ -204,5 +204,42 @@ h3 {
   @include adjust-font-size-to($design-h3-font-size, 2);
   text-align: center;
   @include rhythm(0,3,0,0, $design-h3-font-size);
-  @include alt-font-family;
+  @include serif-font-family;
+}
+
+dl.price-list {
+  background: #F0DAD5;
+  dt {
+    @include padding-leader(1);
+    @include trailing-border;
+    border-bottom-style: dashed;
+    background: inherit;
+    strong {
+      float: left;
+      margin-top: .5em;
+      background: inherit;
+      padding-right: 6px;
+    }
+  }
+  // dd:before {
+  //   content: '\20AC'; // €
+  //   padding-right: .5em;
+  // }
+
+  dd {
+    float: right;
+    margin-top: -1em;
+    padding-left: 6px;
+    background: inherit;
+    @include serif-font-family;
+    font-size: 1.3em;
+    font-weight: bold;
+    sup {
+      font-size: .55em;
+      vertical-align: super;
+      color: #555;
+      position: relative;
+      right: 3px;
+    }
+  }
 }
