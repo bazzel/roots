@@ -33,7 +33,12 @@ module ViewHelpers
     content_tag :div, '', options
   end
 
-
-
+  def roots_images
+    path = '/images/fotos'
+    basedir = File.join(File.dirname(__FILE__),'../public', path)
+    Dir[File.join(basedir, '*')].map do |file|
+      File.join(path, File.basename(file))
+    end
+  end
 
 end

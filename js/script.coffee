@@ -18,3 +18,9 @@
 
 $ ->
   ($ '#menu').lockMenu()
+  ($ '.flexslider').flexslider
+    animation: 'slide'
+    # slideshow: false
+    controlNav: false
+    directionNav: false
+    randomize: true

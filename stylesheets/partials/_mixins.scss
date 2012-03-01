@@ -45,6 +45,7 @@
 ) {
   width: 100%; //Set width explicitly because of position absolute.
   top: 0;
+  z-index: 1;
   &.#{$full} {
     position: absolute;
   }

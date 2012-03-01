@@ -5,7 +5,7 @@
 // probably be customized for each site
 //-----------------------------------------------
 body, select, input, textarea {
-  color: $base-color;
+  color: white;
   // Set your base font here, to apply evenly
   @include base-font-family;
 }
@@ -17,157 +17,56 @@ body, select, input, textarea {
 @include establish-baseline;
 
 body {
-  @include grid;
+  background: image-url('header-xl-diss-bg.png') no-repeat center top #231710;
   @include container;
-  // background: #2b170e;
-  // color: rgba(240, 218, 213, 1);
 }
-//
-// h2 {
-//   @include adjust-font-size-to($design-h2-font-size, 3);
-//   color: $complement-accent-color;
-// }
-//
-//
-// #container, header, article h2 {
-//   @include border-top-left-radius(25px);
-// }
-//
+
 #container {
-  @include pad(4,4);
-  // @include padding-leader(4);
-  background: rgba(240, 218, 213, 1);
-  color: #2b170e;
-  // margin: 0 auto;
-  // width: 700px;
+  @include pad(3,3);
+  // @include grid;
 }
-//
-// header {
-//   background: image-url('header-bg.jpg') no-repeat right top $complement-support-color;
-//   @include padding-leader(1);
-//   padding: {
-//     right: 2em;
-//     left: 2em;
-//   }
-//   border-color: $complement-accent-color;
-//   @include trailing-border(6px, 1);
-//   @include clearfix;
-//
-//   h1 {
-//     float: right;
-//     @include replace-text-with-dimensions('logo.gif');
-//   }
-// }
-//
-// nav {
-//   @include margin-trailer(0.5);
-//   ul {
-//     li {
-//       a {
-//         @include adjust-font-size-to(23px, 2);
-//         text-decoration: none;
-//         @include link-colors($base-color, $complement-accent-color, $complement-accent-color, $base-color);
-//         &.active {
-//           color: $complement-accent-color;
-//         }
-//       }
-//     }
-//   }
-// }
-//
-// article {
-//   $border-width: 3px;
-//   h2 {
-//     // Fonts & Color
-//     // Text
-//     // Background
-//     background: image-url('woman-bg.jpg') no-repeat black;
-//     // Dimensions
-//     // @include rhythm(0, 2.5, 0, 0.5, $design-h2-font-size);
-//     // Positioning & Page Flows
-//     // Borders
-//     border: {
-//       color: $base-color;
-//       right: $border-width $base-color;
-//       left: $border-width $base-color;
-//       style: solid;
-//     }
-//     @include leading-border($border-width, 2.5, $design-h2-font-size);
-//     @include trailing-border($border-width, 0.5, $design-h2-font-size);
-//
-//     // Bullets & Advanced
-//
-//   }
-//
-//   .content {
-//     // Fonts & Color
-//     // Text
-//     text-align: right;
-//     // Background
-//     background: #2C2C2C;
-//     // Dimensions
-//     margin-left: 8em;
-//     padding: {
-//       right: 1em;
-//       left: 1em;
-//     }
-//     @include padding-leader(1);
-//     // Positioning & Page Flows
-//     // Borders
-//     border: {
-//       color: $base-color;
-//       right: $border-width $base-color;
-//       left: $border-width $base-color;
-//       style: solid;
-//     }
-//     @include trailing-border($border-width, 1);
-//     // Bullets & Advanced
-//     em {
-//       @include adjust-font-size-to(1.5 * $base-font-size, 2);
-//       color: $base-color;
-//       display: block;
-//     }
-//
-//   }
-// }
-//
-// #main {
-//   @include rhythm(0, 2, 1, 0);
-//   padding: {
-//     right: 4em;
-//     left: 4em;
-//   }
-// }
-//
-// footer {
-//   @include rhythm(0, 0, 1, 0);
-//   @include clearfix;
-//   padding: {
-//     right: 2em;
-//     left: 2em;
-//   }
-//   .fb-like {
-//     float: left;
-//   }
-//   .made-by {
-//     @include adjust-font-size-to(10px);
-//     text-align: right;
-//   }
-// }
-//
 
+#main {
+  // Fonts & Color
+  // Text
+  // Background
+  background: #2C2C2C;
+  // Dimensions
+  @include margin-trailer(3);
+  @include pad(1,1);
+  // Positioning & Page Flows
+  // Borders
+  border: {
+    color: white;
+    right: 4px white;
+    left: 4px white;
+    style: solid;
+  }
+  @include leading-border(4px);
+  @include trailing-border(4px);
+  // Bullets & Advanced
 
+  @include border-top-left-radius(25px);
+}
 
 header {
-  @include lock-menu;
-  background: rgba(255, 255, 255, 0.85);
+  // Fonts & Color
+  // Text
+  // Background
+  background: rgba(44, 44, 44, 0.85);
+  // Dimensions
   @include padding-leader(.5);
+  // Positioning & Page Flows
+  // Borders
   border-color: $complement-accent-color;
   @include trailing-border(6px, .5);
+  // Bullets & Advanced
+
+  @include lock-menu;
   h1 {
     @include adjust-font-size-to($design-h1-font-size,3);
-    @include replace-text('logo.png');
     @include rhythm(2,0,0,2,$design-h1-font-size);
+    @include replace-text('logo.png');
   }
   nav {
     text-align: center;
@@ -176,9 +75,18 @@ header {
       li {
         a {
           @include alt-font-family;
+          color: white;
+          text-decoration: none;
           @include adjust-font-size-to(22px, 2);
           font-weight: 300;
           letter-spacing: 1px;
+          padding: {
+            left: .25em;
+            right: .25em;
+          }
+          &:hover {
+            color: #9C1E59;
+          }
         }
       }
     }
@@ -187,12 +95,9 @@ header {
 
 h2 {
   @include adjust-font-size-to($design-h2-font-size, 2);
-  text-align: center;
-  @include rhythm(0,13,2,0, $design-h2-font-size);
-  background: image-url('header-l-bg.jpg') no-repeat center bottom #2b170e;
-  // @include background-size(cover);
-  color: white;
   @include alt-font-family;
+  text-align: center;
+  @include rhythm(0,15,4,0, $design-h2-font-size);
   @include single-text-shadow(#000, 1px, 1px, 6px);
   em {
     display: block;
@@ -202,13 +107,16 @@ h2 {
 
 h3 {
   @include adjust-font-size-to($design-h3-font-size, 2);
-  text-align: center;
-  @include rhythm(0,3,0,0, $design-h3-font-size);
   @include serif-font-family;
+  color: #9C1E59;
+  text-align: center;
+  letter-spacing: 1px;
+  @include rhythm(0,3,1,0, $design-h3-font-size);
+  @include single-text-shadow(lighten(#9C1E59, 50%), 1px, 1px, 2px);
 }
 
 dl.price-list {
-  background: #F0DAD5;
+  background: inherit;
   dt {
     @include padding-leader(1);
     @include trailing-border;
@@ -221,19 +129,23 @@ dl.price-list {
       padding-right: 6px;
     }
   }
-  // dd:before {
-  //   content: '\20AC'; // €
-  //   padding-right: .5em;
-  // }
 
   dd {
-    float: right;
-    margin-top: -1em;
-    padding-left: 6px;
-    background: inherit;
+    // Fonts & Color
     @include serif-font-family;
     font-size: 1.3em;
     font-weight: bold;
+    // Text
+    // Background
+    background: inherit;
+    // Dimensions
+    margin-top: -1em;
+    padding-left: 6px;
+    // Positioning & Page Flows
+    float: right;
+    // Borders
+    // Bullets & Advanced
+
     sup {
       font-size: .55em;
       vertical-align: super;
@@ -241,5 +153,13 @@ dl.price-list {
       position: relative;
       right: 3px;
     }
+  }
+}
+
+.gallery {
+  max-width: 927px; // == image-width
+  margin: {
+    right: auto;
+    left: auto;
   }
 }

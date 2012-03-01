@@ -102,7 +102,10 @@
 %p Nulla scelerisque neque a diam varius et dapibus sapien volutpat. Ut sollicitudin, urna in tempus viverra, tortor ante volutpat sapien, eu luctus sapien nunc nec nibh. Quisque velit risus, iaculis quis lacinia at, tincidunt vel velit. Etiam vulputate scelerisque gravida. Sed eu justo viverra mauris pulvinar ullamcorper. Sed eleifend leo ac nisi viverra non blandit nisl convallis. Mauris ac lectus tortor. Donec diam sem, accumsan sit amet ultrices non, lobortis vitae urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi sodales, mauris sit amet aliquet sagittis, ligula nulla posuere diam, in venenatis quam odio id sem. Aenean euismod pulvinar faucibus. Fusce aliquet interdum mi, at condimentum justo lacinia quis.
 
 %h3#fotos Foto's
-%p Cras mollis auctor pulvinar. Nullam et odio massa. Phasellus pharetra fringilla dolor, a convallis nisi sodales quis. Mauris erat lacus, lobortis eu vulputate vel, faucibus quis ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut id sapien leo. Donec congue ligula vitae ligula sagittis accumsan. Etiam tempus enim ut tellus suscipit adipiscing.
+.flexslider.gallery
+  %ul.slides
+    - roots_images.each do |image|
+      %li= image_tag(image)
 
 %h3#contact Contact
 %p Nulla euismod pellentesque nisi, ut aliquam lorem dapibus at. In rhoncus tortor in turpis lobortis viverra. Proin quis pharetra velit. Sed vel condimentum dui. In vitae vestibulum erat. Vivamus justo felis, ullamcorper vel fermentum et, pellentesque et ipsum. Nunc in pretium quam.
