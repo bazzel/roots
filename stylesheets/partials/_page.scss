@@ -5,7 +5,7 @@
 // probably be customized for each site
 //-----------------------------------------------
 body, select, input, textarea {
-  color: white;
+  color: $base-color;
   // Set your base font here, to apply evenly
   @include base-font-family;
 }
@@ -17,7 +17,7 @@ body, select, input, textarea {
 @include establish-baseline;
 
 body {
-  background: image-url('header-xl-diss-bg.png') no-repeat center top #231710;
+  background: image-url('header-xl-diss-bg.png') no-repeat center top $complement-support-color;
   @include container;
 }
 
@@ -37,9 +37,9 @@ body {
   // Positioning & Page Flows
   // Borders
   border: {
-    color: white;
-    right: 4px white;
-    left: 4px white;
+    color: $base-color;
+    right: 4px $base-color;
+    left: 4px $base-color;
     style: solid;
   }
   @include leading-border(4px);
@@ -75,7 +75,7 @@ header {
       li {
         a {
           @include alt-font-family;
-          color: white;
+          color: $base-color;
           text-decoration: none;
           @include adjust-font-size-to(22px, 2);
           font-weight: 300;
@@ -85,7 +85,7 @@ header {
             right: .25em;
           }
           &:hover {
-            color: #9C1E59;
+            color: $complement-accent-color;
           }
         }
       }
@@ -108,11 +108,11 @@ h2 {
 h3 {
   @include adjust-font-size-to($design-h3-font-size, 2);
   @include serif-font-family;
-  color: #9C1E59;
+  color: $complement-accent-color;
   text-align: center;
   letter-spacing: 1px;
   @include rhythm(0,3,1,0, $design-h3-font-size);
-  @include single-text-shadow(lighten(#9C1E59, 50%), 1px, 1px, 2px);
+  @include single-text-shadow(lighten($complement-accent-color, 50%), 1px, 1px, 2px);
 }
 
 dl.price-list {
