@@ -84,7 +84,7 @@ header {
             left: .25em;
             right: .25em;
           }
-          &:hover {
+          &:hover, &.active {
             color: $complement-accent-color;
           }
         }
