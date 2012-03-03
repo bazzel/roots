@@ -99,6 +99,10 @@ h2 {
   text-align: center;
   @include rhythm(0,15,4,0, $design-h2-font-size);
   @include single-text-shadow(#000, 1px, 1px, 6px);
+  a {
+    color: $base-color;
+    text-decoration: none;
+  }
   em {
     display: block;
     font-weight: 100;

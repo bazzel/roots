@@ -41,7 +41,8 @@
     %header.full
       = render "header"
     %h2
-      %strong Nieuwe tijdelijke tarieven
+      %strong
+        = link_to "Nieuwe tijdelijke tarieven", '#acties'
       %em Studenten altijd 15% korting
     #container
       #main{ :role => 'main' }
