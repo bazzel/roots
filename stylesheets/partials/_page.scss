@@ -96,6 +96,7 @@ header {
 h2 {
   @include adjust-font-size-to($design-h2-font-size, 2);
   @include alt-font-family;
+  font-weight: bold;
   text-align: center;
   @include rhythm(0,15,4,0, $design-h2-font-size);
   @include single-text-shadow(#000, 1px, 1px, 6px);
@@ -149,6 +150,9 @@ dl.price-list {
     float: right;
     // Borders
     // Bullets & Advanced
+    &.from {
+      text-decoration: line-through;
+    }
 
     sup {
       font-size: .55em;
