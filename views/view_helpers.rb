@@ -35,6 +35,16 @@ module ViewHelpers
 
   def roots_images
     path = '/images/fotos'
+    list_files(path)
+  end
+
+ def roots_products
+    path = '/images/products'
+    list_files(path)
+  end
+
+ private
+  def list_files(path)
     basedir = File.join(File.dirname(__FILE__),'../public', path)
     Dir[File.join(basedir, '*')].map do |file|
       File.join(path, File.basename(file))
