@@ -6,7 +6,9 @@
 %h4 Studenten altijd 15% korting
 
 %h3#producten Producten
-%p Nulla scelerisque neque a diam varius et dapibus sapien volutpat. Ut sollicitudin, urna in tempus viverra, tortor ante volutpat sapien, eu luctus sapien nunc nec nibh. Quisque velit risus, iaculis quis lacinia at, tincidunt vel velit. Etiam vulputate scelerisque gravida. Sed eu justo viverra mauris pulvinar ullamcorper. Sed eleifend leo ac nisi viverra non blandit nisl convallis. Mauris ac lectus tortor. Donec diam sem, accumsan sit amet ultrices non, lobortis vitae urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi sodales, mauris sit amet aliquet sagittis, ligula nulla posuere diam, in venenatis quam odio id sem. Aenean euismod pulvinar faucibus. Fusce aliquet interdum mi, at condimentum justo lacinia quis.
+%ul
+  - roots_products.each do |image|
+    %li= image_tag(image)
 
 %h3#fotos Foto's
 .flexslider.gallery
@@ -15,4 +17,26 @@
       %li= image_tag(image)
 
 %h3#contact Contact
-%p Nulla euismod pellentesque nisi, ut aliquam lorem dapibus at. In rhoncus tortor in turpis lobortis viverra. Proin quis pharetra velit. Sed vel condimentum dui. In vitae vestibulum erat. Vivamus justo felis, ullamcorper vel fermentum et, pellentesque et ipsum. Nunc in pretium quam.
+.address
+  .vcard
+    .adr
+    .fn.n Roots Kappers
+    .street-address Haagdijk 20
+    .postal-code 4811 TT
+    .region Breda
+    .tel 076-5149498
+    .email= mail_to "info@rootskappers.nl"
+.map
+  = link_to(image_tag("/images/map.jpg"), "http://g.co/maps/gs5gb")
+.opening-hours
+  %dl
+    %dt Di.
+    %dd 9:30 - 18:00
+    %dt Wo.
+    %dd 9:30 - 18:00
+    %dt Do.
+    %dd 9:30 - 21:00
+    %dt Vr.
+    %dd 9:30 - 18:00
+    %dt Za.
+    %dd 9:30 - 17:00
