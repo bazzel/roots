@@ -17,26 +17,27 @@
       %li= image_tag(image)
 
 %h3#contact Contact
-.address
-  .vcard
-    .adr
-    .fn.n Roots Kappers
-    .street-address Haagdijk 20
-    .postal-code 4811 TT
-    .region Breda
-    .tel 076-5149498
-    .email= mail_to "info@rootskappers.nl"
-.map
-  = link_to(image_tag("/images/map.jpg"), "http://g.co/maps/gs5gb")
-.opening-hours
-  %dl
-    %dt Di.
-    %dd 9:30 - 18:00
-    %dt Wo.
-    %dd 9:30 - 18:00
-    %dt Do.
-    %dd 9:30 - 21:00
-    %dt Vr.
-    %dd 9:30 - 18:00
-    %dt Za.
-    %dd 9:30 - 17:00
+.contact
+  .address
+    .vcard
+      .adr
+      .fn.n Roots Kappers
+      .street-address Haagdijk 20
+      .postal-code 4811 TT
+      .region Breda
+      .tel 076-5149498
+      .email= mail_to "info@rootskappers.nl"
+  .map
+    = link_to(image_tag("/images/map.jpg"), "http://g.co/maps/gs5gb")
+  .opening-hours
+    %dl
+      %dt Di.
+      %dd 9:30 - 18:00
+      %dt Wo.
+      %dd 9:30 - 18:00
+      %dt Do.
+      %dd 9:30 - 21:00
+      %dt Vr.
+      %dd 9:30 - 18:00
+      %dt Za.
+      %dd 9:30 - 17:00

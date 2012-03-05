@@ -55,7 +55,6 @@ img {
   // Bullets & Advanced
 
   @include border-top-left-radius(25px);
-  @include clearfix;
 }
 
 header {
@@ -139,8 +138,8 @@ h4 {
   // Background
   @include background-image(linear-gradient(lighten($complement-accent-color, 5%), darken($complement-accent-color, 5%)));
   // Dimensions
-  margin-left: -9%;
-  padding-left: 9%;
+  margin-left: -13%;
+  padding-left: 13%;
   @include rhythm(2,0,0,0, $design-h4-font-size);
   // Positioning & Page Flows
   position: relative;
@@ -161,7 +160,7 @@ h4 {
     top: 100%;
     z-index: -1;
     // Borders
-    border-left: 60px solid transparent;
+    border-left: 80px solid transparent;
     border-top: 40px solid $complement-accent-color;
     // Bullets & Advanced
     content: '';
@@ -220,38 +219,42 @@ dl.price-list {
   }
 }
 
-.address {
-  @include columns(3,10);
-  .postal-code {
-    float: left;
-    padding-right: .5em;
-  }
-}
-.opening-hours {
-  @include columns(2,10);
-  @include prefix(1,10);
-  @include omega(10);
-  dl {
-    dt {
-      color: $complement-accent-color;
-      font-weight: bold;
-      clear: both;
+.contact {
+  @include clearfix;
+  .address {
+    @include columns(3,10);
+    .postal-code {
       float: left;
-    }
-    dd {
-      float: right;
+      padding-right: .5em;
     }
   }
+  .opening-hours {
+    @include columns(2,10);
+    @include prefix(1,10);
+    @include omega(10);
+    dl {
+      dt {
+        color: $complement-accent-color;
+        font-weight: bold;
+        clear: both;
+        float: left;
+      }
+      dd {
+        float: right;
+      }
+    }
 
-}
+  }
 
-.map {
-  text-align: center;
-  @include columns(4,10);
-  @include margin-trailer(2);
-  img {
-    border: $base-color 4px solid;
-    @include border-top-left-radius(25px); // Rounded borders are shown behind the image instead of clipping (known issue)!
+  .map {
+    text-align: center;
+    @include columns(4,10);
+    @include margin-trailer(2);
+    img {
+      border: $base-color 4px solid;
+      // @include border-top-left-radius(25px); // Rounded borders are shown behind the image instead of clipping (known issue)!
+      @include single-box-shadow(#000, 0px, 8px, 20px);
+    }
   }
 }
 
