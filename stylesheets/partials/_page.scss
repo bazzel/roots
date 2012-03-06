@@ -253,8 +253,56 @@ dl.price-list {
     img {
       border: $base-color 4px solid;
       // @include border-top-left-radius(25px); // Rounded borders are shown behind the image instead of clipping (known issue)!
-      @include single-box-shadow(#000, 0px, 8px, 20px);
+      @include single-box-shadow(rgba(0,0,0,.7), 0px, 8px, 20px);
     }
   }
 }
 
+ul.product-list {
+  padding: rhythm(1);
+  @include clearfix;
+  li {
+    float: left;
+    a {
+      // Fonts & Color
+      // Text
+      text-align: center;
+      // Background
+      background: #2C2C2C;
+      // Dimensions
+      margin: rhythm(.5);
+      padding: rhythm(1);
+      // Positioning & Page Flows
+      display: block;
+      position: relative;
+      // Borders
+      // Bullets & Advanced
+      opacity: .25;
+      @include border-radius(6px);
+      @include single-box-shadow(rgba(0,0,0,.9), 2px, 2px, 8px, 0px);
+      @include rotate(-6deg);
+      @include single-transition(transform opacity, .25s, linear);
+    }
+    &:nth-child(even) a {
+      top: 5px;
+      @include rotate(4deg);
+    }
+    &:nth-child(3n) a {
+      top: -5px;
+      @include rotate(-3deg);
+    }
+    &:nth-child(5n) a {
+      top: -10px;
+      @include rotate(5deg);
+    }
+    a:hover, a:focus {
+      z-index: 5;
+      opacity: 1;
+      @include single-box-shadow(rgba(#000,.2), 0px, 8px, 20px, 0px);
+      @include scale(1.25);
+    }
+    img {
+      max-width: none;
+    }
+  }
+}

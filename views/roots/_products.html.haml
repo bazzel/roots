@@ -1,0 +1,5 @@
+%h3#producten Producten
+%ul.product-list
+  - roots_products.each do |image|
+    %li= link_to(image_tag(image), '#')
+
